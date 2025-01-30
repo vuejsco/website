@@ -1,0 +1,40 @@
+---
+const events = [
+  {
+    date: "28 de Abril, 2024",
+    title: "Introducción a Vue 3 Composition API",
+    description: "Aprende los fundamentos de la Composition API y cómo puede mejorar tu código."
+  },
+  {
+    date: "5 de Mayo, 2024",
+    title: "Workshop: Testing en Vue.js",
+    description: "Taller práctico sobre testing en aplicaciones Vue.js con Vitest y Testing Library."
+  },
+  {
+    date: "12 de Mayo, 2024",
+    title: "Vue.js y TypeScript",
+    description: "Mejora tus aplicaciones Vue.js con TypeScript y obtén mejor tooling."
+  }
+];
+---
+<div class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="lg:text-center mb-12">
+      <h2 class="text-3xl font-extrabold text-gray-900">Próximos Eventos</h2>
+    </div>
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+      {events.map(event => (
+        <div class="bg-white overflow-hidden shadow rounded-lg">
+          <div class="px-4 py-5 sm:p-6">
+            <div class="text-sm text-vue-green mb-2">{event.date}</div>
+            <h3 class="text-lg font-medium text-gray-900 mb-2">{event.title}</h3>
+            <p class="text-base text-gray-500 mb-4">
+              {event.description}
+            </p>
+            <a href="#" class="text-vue-green hover:text-vue-green/90">Más información →</a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>

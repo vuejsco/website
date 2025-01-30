@@ -1,10 +1,15 @@
 ---
+import '@fontsource/inter';
+
 interface Props {
   title: string;
   description?: string;
 }
 
-const { title, description = "La comunidad de Vue.js en Colombia" } = Astro.props;
+const {
+  title,
+  description = 'Vue JS Colombia - Comunidad de Vue.js en Colombia',
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -15,29 +20,68 @@ const { title, description = "La comunidad de Vue.js en Colombia" } = Astro.prop
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title} | Vue JS Colombia</title>
+    <title>{title}</title>
   </head>
-  <body class="min-h-screen bg-gray-50">
+  <body class="bg-gray-50">
     <header class="bg-white shadow-sm">
-      <nav class="container mx-auto px-4 py-4">
-        <div class="flex items-center justify-between">
-          <a href="/" class="text-2xl font-bold text-vue-green">Vue JS Colombia</a>
-          <div class="hidden md:flex space-x-6">
-            <a href="/" class="text-gray-700 hover:text-vue-green">Inicio</a>
-            <a href="/about" class="text-gray-700 hover:text-vue-green">Nosotros</a>
-            <a href="/events" class="text-gray-700 hover:text-vue-green">Eventos</a>
-            <a href="/resources" class="text-gray-700 hover:text-vue-green">Recursos</a>
-            <a href="/blog" class="text-gray-700 hover:text-vue-green">Blog</a>
-            <a href="/contact" class="text-gray-700 hover:text-vue-green">Contacto</a>
+      <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 justify-between">
+          <div class="flex">
+            <a href="/" class="flex items-center">
+              <img src="/logo.svg" alt="Vue JS Colombia" class="h-8 w-auto" />
+              <span class="ml-2 text-xl font-bold text-vue-blue"
+                >Vue JS Colombia</span
+              >
+            </a>
           </div>
-          <a 
-            href="https://bit.ly/3E4PWlY" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            class="bg-vue-green text-white px-4 py-2 rounded-lg hover:bg-vue-dark transition-colors"
-          >
-            Únete a Discord
-          </a>
+          <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+            <a
+              href="/"
+              class="inline-flex items-center px-1 pt-1 text-sm font-medium text-vue-blue"
+            >
+              Inicio
+            </a>
+            <a
+              href="/about"
+              class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-vue-blue"
+            >
+              Nosotros
+            </a>
+            <a
+              href="/events"
+              class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-vue-blue"
+            >
+              Eventos
+            </a>
+            <a
+              href="/resources"
+              class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-vue-blue"
+            >
+              Recursos
+            </a>
+            <a
+              href="/blog"
+              class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-vue-blue"
+            >
+              Blog
+            </a>
+            <a
+              href="/contact"
+              class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-vue-blue"
+            >
+              Contacto
+            </a>
+          </div>
+          <div class="flex items-center">
+            <a
+              href="https://meetup.com/vuejsco"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center rounded-md border border-transparent bg-vue-green px-4 py-2 text-sm font-medium text-white hover:bg-vue-green/90"
+            >
+              Síguenos en Meetup
+            </a>
+          </div>
         </div>
       </nav>
     </header>
@@ -46,51 +90,82 @@ const { title, description = "La comunidad de Vue.js en Colombia" } = Astro.prop
       <slot />
     </main>
 
-    <footer class="bg-vue-dark text-white mt-20">
-      <div class="container mx-auto px-4 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <h3 class="text-xl font-bold mb-4">Vue JS Colombia</h3>
-            <p class="text-gray-300">Conectando, aprendiendo y creciendo juntos en Vue.js y JavaScript.</p>
+    <footer class="mt-12 bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-4">
+          <div class="col-span-2">
+            <img
+              src="/logo.svg"
+              alt="Vue JS Colombia"
+              class="mb-4 h-8 w-auto"
+            />
+            <p class="text-sm text-gray-500">
+              Vue JS Colombia es una comunidad de desarrolladores apasionados
+              por Vue.js y JavaScript.
+            </p>
           </div>
           <div>
-            <h3 class="text-xl font-bold mb-4">Enlaces Rápidos</h3>
-            <ul class="space-y-2">
-              <li><a href="/about" class="text-gray-300 hover:text-white">Nosotros</a></li>
-              <li><a href="/events" class="text-gray-300 hover:text-white">Eventos</a></li>
-              <li><a href="/resources" class="text-gray-300 hover:text-white">Recursos</a></li>
-              <li><a href="/contact" class="text-gray-300 hover:text-white">Contacto</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold mb-4">Comunidad</h3>
-            <ul class="space-y-2">
-              <li><a href="https://bit.ly/3E4PWlY" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white">Discord</a></li>
-              <li><a href="https://meetup.com/vuejsco" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white">Meetup</a></li>
-              <li><a href="https://twitter.com/vuejscol" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white">Twitter</a></li>
-              <li><a href="https://youtube.com/@vuejsco" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white">YouTube</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold mb-4">Síguenos</h3>
-            <div class="flex space-x-4">
-              <a href="https://twitter.com/vuejscol" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white">
-                <span class="sr-only">Twitter</span>
-                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
-                </svg>
+            <h3
+              class="text-sm font-semibold uppercase tracking-wider text-gray-400"
+            >
+              Comunidad
+            </h3>
+            <div class="mt-4 space-y-4">
+              <a
+                href="https://meetup.com/vuejsco"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block text-base text-gray-500 hover:text-gray-900"
+              >
+                Meetup
               </a>
-              <a href="https://youtube.com/@vuejsco" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white">
-                <span class="sr-only">YouTube</span>
-                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                </svg>
+              <a
+                href="https://www.youtube.com/@vuejsco"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block text-base text-gray-500 hover:text-gray-900"
+              >
+                YouTube
+              </a>
+              <a
+                href="https://twitter.com/vuejsco"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block text-base text-gray-500 hover:text-gray-900"
+              >
+                Twitter
+              </a>
+              <a
+                href="https://bit.ly/3E4PWlY"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block text-base text-gray-500 hover:text-gray-900"
+              >
+                Discord
               </a>
             </div>
           </div>
-        </div>
-        <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-300">
-          <p>&copy; {new Date().getFullYear()} Vue JS Colombia. Todos los derechos reservados.</p>
+          <div>
+            <h3
+              class="text-sm font-semibold uppercase tracking-wider text-gray-400"
+            >
+              Legal
+            </h3>
+            <div class="mt-4 space-y-4">
+              <a
+                href="/privacy"
+                class="block text-base text-gray-500 hover:text-gray-900"
+              >
+                Política de Privacidad
+              </a>
+              <a
+                href="/terms"
+                class="block text-base text-gray-500 hover:text-gray-900"
+              >
+                Términos de Uso
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

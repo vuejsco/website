@@ -1,0 +1,43 @@
+---
+const features = [
+  {
+    title: "Eventos y Meetups",
+    description: "Organizamos eventos regulares donde compartimos conocimiento y experiencias sobre Vue.js."
+  },
+  {
+    title: "Recursos y Aprendizaje",
+    description: "Accede a recursos educativos, tutoriales y proyectos prácticos para mejorar tus habilidades."
+  },
+  {
+    title: "Networking",
+    description: "Conecta con otros desarrolladores, encuentra mentores y oportunidades laborales."
+  }
+];
+---
+<div class="py-16 bg-gray-50 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="lg:text-center">
+      <h2 class="text-base text-vue-green font-semibold tracking-wide uppercase">Sobre Nosotros</h2>
+      <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+        Una comunidad apasionada por Vue.js
+      </p>
+      <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+        Somos un espacio para aprender, compartir y colaborar en el ecosistema de Vue.js, JavaScript y TypeScript.
+        Nuestra misión es impulsar el crecimiento profesional de los desarrolladores en Colombia.
+      </p>
+    </div>
+
+    <div class="mt-16">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+        {features.map(feature => (
+          <div class="text-center">
+            <h3 class="text-lg font-medium text-gray-900">{feature.title}</h3>
+            <p class="mt-2 text-base text-gray-500">
+              {feature.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
