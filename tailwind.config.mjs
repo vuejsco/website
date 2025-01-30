@@ -5,9 +5,12 @@ export default {
     extend: {
       colors: {
         'vue-green': '#42b883',
-        'vue-dark': '#35495e',
+        'vue-blue': '#35495e',
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
     },
   },
   plugins: [],
-}
+};
