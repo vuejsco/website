@@ -1,15 +1,12 @@
 ---
-import '@fontsource/inter';
+import '@fontsource/inter'
 
 interface Props {
-  title: string;
-  description?: string;
+  title: string
+  description?: string
 }
 
-const {
-  title,
-  description = 'Vue JS Colombia - Comunidad de Vue.js en Colombia',
-} = Astro.props;
+const { title, description = 'Vue JS Colombia - Comunidad de Vue.js en Colombia' } = Astro.props
 ---
 
 <!doctype html>
@@ -29,9 +26,7 @@ const {
           <div class="flex">
             <a href="/" class="flex items-center">
               <img src="/logo.svg" alt="Vue JS Colombia" class="h-8 w-auto" />
-              <span class="ml-2 text-xl font-bold text-vue-blue"
-                >Vue JS Colombia</span
-              >
+              <span class="ml-2 text-xl font-bold text-vue-blue">Vue JS Colombia</span>
             </a>
           </div>
           <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
@@ -94,22 +89,14 @@ const {
       <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div class="col-span-2">
-            <img
-              src="/logo.svg"
-              alt="Vue JS Colombia"
-              class="mb-4 h-8 w-auto"
-            />
+            <img src="/logo.svg" alt="Vue JS Colombia" class="mb-4 h-8 w-auto" />
             <p class="text-sm text-gray-500">
-              Vue JS Colombia es una comunidad de desarrolladores apasionados
-              por Vue.js y JavaScript.
+              Vue JS Colombia es una comunidad de desarrolladores apasionados por Vue.js y
+              JavaScript.
             </p>
           </div>
           <div>
-            <h3
-              class="text-sm font-semibold uppercase tracking-wider text-gray-400"
-            >
-              Comunidad
-            </h3>
+            <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400">Comunidad</h3>
             <div class="mt-4 space-y-4">
               <a
                 href="https://meetup.com/vuejsco"
@@ -126,6 +113,14 @@ const {
                 class="block text-base text-gray-500 hover:text-gray-900"
               >
                 YouTube
+              </a>
+              <a
+                href="https://github.com/vuejsco"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block text-base text-gray-500 hover:text-gray-900"
+              >
+                GitHub
               </a>
               <a
                 href="https://twitter.com/vuejsco"
@@ -146,22 +141,12 @@ const {
             </div>
           </div>
           <div>
-            <h3
-              class="text-sm font-semibold uppercase tracking-wider text-gray-400"
-            >
-              Legal
-            </h3>
+            <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400">Legal</h3>
             <div class="mt-4 space-y-4">
-              <a
-                href="/privacy"
-                class="block text-base text-gray-500 hover:text-gray-900"
-              >
+              <a href="/privacy" class="block text-base text-gray-500 hover:text-gray-900">
                 Política de Privacidad
               </a>
-              <a
-                href="/terms"
-                class="block text-base text-gray-500 hover:text-gray-900"
-              >
+              <a href="/terms" class="block text-base text-gray-500 hover:text-gray-900">
                 Términos de Uso
               </a>
             </div>
